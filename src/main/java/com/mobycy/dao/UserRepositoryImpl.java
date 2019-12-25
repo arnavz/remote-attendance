@@ -1,9 +1,12 @@
 package com.mobycy.dao;
 
 import com.mobycy.beans.User;
+import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
+@Repository
 public class UserRepositoryImpl implements UserRepository {
 
     @Override
@@ -17,22 +20,28 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public <S extends User> S save(S entity) {
+    public List<User> getActiveUsers() {
+        return null;
+    }
+
+
+    @Override
+    public Object save(Object entity) {
         return null;
     }
 
     @Override
-    public <S extends User> Iterable<S> saveAll(Iterable<S> entities) {
+    public Iterable saveAll(Iterable entities) {
         return null;
     }
 
     @Override
-    public Optional<User> findById(Integer integer) {
+    public Optional findById(Object o) {
         return Optional.empty();
     }
 
     @Override
-    public boolean existsById(Integer integer) {
+    public boolean existsById(Object o) {
         return false;
     }
 
@@ -42,9 +51,10 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public Iterable<User> findAllById(Iterable<Integer> integers) {
+    public Iterable findAllById(Iterable iterable) {
         return null;
     }
+
 
     @Override
     public long count() {
@@ -52,17 +62,17 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public void deleteById(Integer integer) {
+    public void deleteById(Object o) {
 
     }
 
     @Override
-    public void delete(User entity) {
+    public void delete(Object entity) {
 
     }
 
     @Override
-    public void deleteAll(Iterable<? extends User> entities) {
+    public void deleteAll(Iterable entities) {
 
     }
 
